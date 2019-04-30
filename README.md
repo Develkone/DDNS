@@ -8,6 +8,8 @@
 
 ```bash
 pip3 install aliyun-python-sdk-core
+pip3 install redis
+
 ```
 
 ## Run
@@ -35,7 +37,9 @@ python3 src/DDNS.py -6   # 改用ipv6
     "First-level-domain": "Your_First-level-domain",//一级域名，例如 example.com
     "Second-level-domain": "Your_Second-level-domain"//二级域名，例如 ddns.example.com 填入ddns即可
 }
+
 ```
+redis数据库配置和更新频率存放于config.py中，可按自己情况修改
 ## Tip
 > 判断自家宽带是否是动态IP的方式：
 > * Step 1：百度搜索IP，查到自己的IP地址
@@ -57,6 +61,7 @@ python3 src/DDNS.py -6   # 改用ipv6
 > * 2018/9/24 修改失败提示输出，添加阿里帮助网址，让用户可查询错误对应信息
 > * 2018/12/24 改进ip获取方式，删除BS4依赖，感谢@Nielamu
 > * 2018/12/27 增加ipv6支持，感谢@chnlkw
+> * 2019/4/30 增加自动更新功能，默认每60s检查一次
 
 ## Contribution
 如果感兴趣欢迎fork项目，如果有任何问题欢迎在issue区提问~
